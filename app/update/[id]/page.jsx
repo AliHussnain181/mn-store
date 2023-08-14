@@ -14,6 +14,7 @@ const Page = ({ params }) => {
     const { user } = useContext(Context);
 
     useEffect(() => {
+        console.log(user.role);
         if (!user || user.role !== 'admin') {
             toast.error("You don't have access to this page.");
             router.push('/');

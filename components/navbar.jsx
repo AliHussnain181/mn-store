@@ -55,11 +55,11 @@ const Navbar = () => {
               <RxCross1 size={27} className='cursor-pointer md:hidden ' onClick={toggleMenu} />
           }
         </div>
-        <div className={`bg-white fixed top-0  h-[100vh] font-semibold font-Special text-xl w-[19rem] flex flex-col py-4 px-5 text-[14.3px]  ${isOpen ? '-left-80' : 'left-0'} transition-all duration-300 `}>
+        <div onClick={toggleMenu} className={`bg-white fixed top-0  h-[100vh] font-semibold font-Special text-xl w-[19rem] flex flex-col py-4 px-5 text-[14.3px]  ${isOpen ? '-left-80' : 'left-0'} transition-all duration-200 `}>
           <Link className='border-gray-700 border-b-[0.1rem] py-2.5' href="/">Home</Link>
           <Link className='border-gray-700 border-b-[0.1rem] py-2.5' href="/about">About</Link>
           {user._id ? <Link className='border-gray-700 border-b-[0.1rem] py-2.5' href="/profile"><CgProfile size={25} /></Link>
-            : <Link href="/login" className='bg-[#FFFFFF] text-sm text-[#d5a953] px-1 w-24 py-1.5 my-2 rounded-md border-[#d5a953] border-2'>Login Now</Link>
+            : <Link href="/login" className='bg-[#FFFFFF] animated-button text-sm my-2 w-36'>Login Now</Link>
           }
         </div>
       </div>
